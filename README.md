@@ -38,6 +38,34 @@
 
 ------
 
+**Решение**
+
+Создал Deployment приложение [deployment.yaml](manifests/deployment.yaml), состоящего из контейнеров busybox и multitool.
+
+Создал [pv.yaml](manifests/pv.yaml) и [pvc.yaml](manifests/pvc.yaml) для подключения папки на локальной ноде, которая будет использована в поде.
+
+Состояние pv
+
+<img src="images/Task_1_2.png" alt="Task_1_2.png" width="300" height="auto"> 
+
+Демонстрация, что multitool может читать файл, в который busybox пишет каждые пять секунд в общей директории.
+
+<img src="images/Task_1_3.png" alt="Task_1_3.png" width="200" height="auto"> 
+
+Удалил Deployment и PVC. Состояние pv на скриншоте ниже.  PV перешёл в состояние Released, потому что PVC было удалено, но данные в PV остались (политика Retain).
+
+<img src="images/Task_1_4.png" alt="Task_1_4.png" width="300" height="auto">
+
+Демонтсрация, что файл сохранился на локальном диске ноды.
+
+<img src="images/Task_1_5.png" alt="Task_1_5.png" width="300" height="auto">
+
+После удаления файл остаётся на диске, так как Kubernetes не удаляет данные автоматически при удалении PV (политика Retain).
+
+<img src="images/Task_1_6.png" alt="Task_1_6.png" width="300" height="auto">
+
+------
+
 ### Задание 2
 
 **Что нужно сделать**
