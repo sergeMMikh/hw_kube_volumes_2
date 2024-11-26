@@ -46,7 +46,7 @@
 
 Состояние pv
 
-<img src="images/Task_1_2.png" alt="Task_1_2.png" width="300" height="auto"> 
+<img src="images/Task_1_2.png" alt="Task_1_2.png" width="400" height="auto"> 
 
 Демонстрация, что multitool может читать файл, в который busybox пишет каждые пять секунд в общей директории.
 
@@ -54,15 +54,15 @@
 
 Удалил Deployment и PVC. Состояние pv на скриншоте ниже.  PV перешёл в состояние Released, потому что PVC было удалено, но данные в PV остались (политика Retain).
 
-<img src="images/Task_1_4.png" alt="Task_1_4.png" width="300" height="auto">
+<img src="images/Task_1_4.png" alt="Task_1_4.png" width="400" height="auto">
 
 Демонтсрация, что файл сохранился на локальном диске ноды.
 
-<img src="images/Task_1_5.png" alt="Task_1_5.png" width="300" height="auto">
+<img src="images/Task_1_5.png" alt="Task_1_5.png" width="400" height="auto">
 
 После удаления файл остаётся на диске, так как Kubernetes не удаляет данные автоматически при удалении PV (политика Retain).
 
-<img src="images/Task_1_6.png" alt="Task_1_6.png" width="300" height="auto">
+<img src="images/Task_1_6.png" alt="Task_1_6.png" width="400" height="auto">
 
 ------
 
