@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv
+spec:
+  capacity:
+    storage: 1Gi  # Укажите необходимый объем хранилища
+  accessModes:
+    - ReadWriteMany  # Режимы доступа: ReadWriteOnce, ReadOnlyMany или ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain  # Политика возврата: Retain, Delete или Recycle
+  storageClassName: nfs-storage  # Имя StorageClass, должно совпадать с PVC
+  nfs:
+    path: /srv/nfs/k8s  # Путь на сервере NFS
+    server: <NFS_SERVER_IP>  # IP-адрес или DNS-имя сервера NFS
