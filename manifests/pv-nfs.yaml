@@ -11,4 +11,4 @@ spec:
   storageClassName: nfs-storage  # Имя StorageClass, должно совпадать с PVC
   nfs:
     path: /srv/nfs/k8s  # Путь на сервере NFS
-    server: "192.168.33.101"  # IP-адрес или DNS-имя сервера NFS
+    server: "localhost"  # IP-адрес или DNS-имя сервера NFS
