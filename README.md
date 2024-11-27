@@ -79,6 +79,23 @@
 
 ------
 
+**Решение**
+
+Включил и настроить NFS-сервер на MicroK8S.
+
+<img src="images/Task_2_2.png" alt="Task_2_2.png" width="400" height="auto">
+
+Создал Deployment приложения [deployment-nfs.yaml](manifests/deployment-nfs.yaml), и подключил к нему [pvc-nfc.yaml](manifests/pvc-nfc.yaml), созданный автоматически на сервере NFS [nfs-storageclass.yaml](manifests/nfs-storageclass.yaml).
+
+Получил список нодов
+
+<img src="images/Task_2_3.png" alt="Task_2_3.png" width="400" height="auto">
+
+
+ 
+
+-----
+
 ### Правила приёма работы
 
 1. Домашняя работа оформляется в своём Git-репозитории в файле README.md. Выполненное задание пришлите ссылкой на .md-файл в вашем репозитории.
