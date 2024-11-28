@@ -4,11 +4,11 @@ metadata:
   name: nfs-pv
 spec:
   capacity:
-    storage: 1Gi  # Укажите необходимый объем хранилища
+    storage: 1Gi
   accessModes:
-    - ReadWriteMany  # Режимы доступа: ReadWriteOnce, ReadOnlyMany или ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain  # Политика возврата: Retain, Delete или Recycle
-  storageClassName: nfs-storage  # Имя StorageClass, должно совпадать с PVC
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: nfs-storage
   nfs:
-    path: /srv/nfs/k8s  # Путь на сервере NFS
-    server: "localhost"  # IP-адрес или DNS-имя сервера NFS
+    path: /srv/nfs/k8s  # Убедитесь, что этот путь существует на сервере NFS
+    server: 192.168.33.102  # IP-адрес вашего NFS-сервера
