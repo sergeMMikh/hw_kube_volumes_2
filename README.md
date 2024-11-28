@@ -91,6 +91,9 @@
 
 <img src="images/Task_2_4.png" alt="Task_2_4.png" width="300" height="auto">
 
+Проверил данные на поде сообщения на NFS-сервере
+
+<img src="images/Task_2_5.png" alt="Task_2_5.png" width="500" height="auto">
 
 -----
 
